@@ -20,14 +20,26 @@ app.post('/api/v1/pre-interview', async( req,res) => {
       const githubUrl = data.github.endsWith("/") ? data.github.slice(0,-1) : data.github;
       const githubUsername = githubUrl.split("/").pop();
      
-      const userRepo = await axios.get(`https://api.github.com/users/${githubUsername}/repos`)
-      const filteredUserRepos = userRepo.data.map((x : any)=>({
-        description : x.description,
-        name : x.name,  
-        full_name : x.full_name,
-        starCount : x.stargazers_count  
-      }))
+      const userRepo = await axios.get(`https://api.github.com/users/${githubUsername}/repos`,
+        {
+          headers : {
+            Authorization : `Bearer ${process.env.GITHUB_TOKEN}`,
+            Accept: "application/vnd.github+json"
+          }
+        }
+      )
+      const filteredRepos = userRepo.data
+       .map((repo: any) => ({
+        name: repo.name,
+        description: repo.description,
+        stars: repo.stargazers_count,
+        language: repo.language,
+        url: repo.html_url
+         }))
+       .sort((a: any, b: any) => b.stars - a.stars)
+       .slice(0, 5);
 
-      console.log(filteredUserRepos)
+      console.log(filteredRepos)
+      res.json({github : filteredRepos})
 })
 app.listen(3001);
