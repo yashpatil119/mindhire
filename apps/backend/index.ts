@@ -2,7 +2,7 @@ import express from "express";
 import { PreInterviewBody } from "./types";
 import axios from "axios";
 import cors from "cors"
-
+import {prisma }from "./db"
 const app = express();
 app.use(express.json());
 app.use(cors())
@@ -39,7 +39,15 @@ app.post('/api/v1/pre-interview', async( req,res) => {
        .sort((a: any, b: any) => b.stars - a.stars)
        .slice(0, 5);
 
+       const interview = await prisma.interview.create({
+           data : {
+            githubMetadata : JSON.stringify(filteredRepos),
+            status :"Pre"
+           }
+       })
+
+
       console.log(filteredRepos)
-      res.json({github : filteredRepos})
+      res.json({id : interview.id})
 })
 app.listen(3001);

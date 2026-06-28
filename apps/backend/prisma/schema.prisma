@@ -1,0 +1,34 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Interview {
+  id  String      @id @default(uuid())
+  githubMetadata   Json
+  status          InterviewStatus
+  score           Int
+  conversions     Message[]
+}
+
+model Message {
+  id              String     @id @default(uuid())
+  messge          String
+  interviewId     String
+  interview       Interview @relation(fields: [interviewId],references: [id])
+}
+
+enum InterviewStatus {
+     Pre 
+     Inprogress
+     Done
+}

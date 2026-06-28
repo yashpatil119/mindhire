@@ -5,19 +5,23 @@ import { Button } from '../components/ui/button';
 import {toast, Toaster } from "sonner"
 import axios from 'axios';
 import { BACKEND_URL } from '@/lib/config';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 function Form() {
     const [github,setGithub] = useState("")
-
+    const[loading,setLoading] = useState(false)
+    const navigate = useNavigate();
    async function onsubmit(){
          if(!github){
             toast("Please provide Valid Github & LinkedIn URLS")
             return;
          }
          
-       await axios.post(`${BACKEND_URL}/api/v1/pre-interview`,{
+        const response =  await axios.post(`${BACKEND_URL}/api/v1/pre-interview`,{
             github
          })
+
+        navigate(`/interview/${response.data.id}`);
     }
   return (
   <div className="h-screen w-screen flex justify-center items-center ">
@@ -29,7 +33,7 @@ function Form() {
           <Input placeholder='GithubURL' onChange={e => setGithub(e.target.value)} /> 
         </div>
         <div className='flex justify-center p-3'>
-           <Button onClick={onsubmit}>Start Interview</Button>
+           <Button disabled={loading} onClick={onsubmit}  >{loading ? "Starting Intervivew>..." : "Start Interview"}</Button>
         </div>
         <Toaster position='bottom-left'/>
      </div>   
@@ -37,4 +41,4 @@ function Form() {
   )
 }
 
-export default Form
+export default Form;
