@@ -1,0 +1,128 @@
+> D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:1831:export declare interface Content {
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:1832:    /** List of parts that constitute a single message. Each part may have
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:1833:     a different IANA MIME type. */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:1834:    parts?: Part[];
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:1835:    /** Optional. The producer of the content. Must be either 'user' or 'model'. If not set, the service will default to 'user'. */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:1836:    role?: string;
+> D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:1845:export declare interface ContentEmbedding {
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:1846:    /** A list of floats representing an embedding.
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:1847:     */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:1848:    values?: number[];
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:1849:    /** Gemini Enterprise Agent Platform only. Statistics of the input text associated with this
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:1850:     embedding.
+> D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:1856:export declare interface ContentEmbeddingStatistics {
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:1857:    /** Gemini Enterprise Agent Platform only. If the input text was truncated due to having
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:1858:     a length longer than the allowed maximum input.
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:1859:     */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:1860:    truncated?: boolean;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:1861:    /** Gemini Enterprise Agent Platform only. Number of tokens of the input text.
+> D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:4484:    inlineData?: FunctionResponseBlob;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:4485:    /** URI based data. This field is not supported in Gemini API. */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:4486:    fileData?: FunctionResponseFileData;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:4487:}
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:4488:
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:4489:/** Specifies how the response should be scheduled in the conversation. Only applicable to NON_BLOCKING function calls, is ignored otherwise. Defaults to WHEN_IDLE. */
+> D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:6185:    text?: string;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:6186:    /** The title of the place. */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:6187:    title?: string;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:6188:    /** The URI of the place. */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:6189:    uri?: string;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:6190:    /** Output only. Route information. */
+> D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:6252:    text?: string;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:6253:    /** The title of the retrieved data source. */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:6254:    title?: string;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:6255:    /** The URI of the retrieved data source. */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:6256:    uri?: string;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:6257:    /** Optional. User-provided metadata about the retrieved context. This field is not supported in Vertex AI. */
+> D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:7062:    output_text?: string | undefined;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:7063:    /**
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:7064:     * An image content block.
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:7065:     */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:7066:    output_image?: ImageContent | undefined;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:7067:    /**
+> D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8179:    text?: string;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8180:    /** Marks the start of user activity. */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8181:    activityStart?: ActivityStart;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8182:    /** Marks the end of user activity. */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8183:    activityEnd?: ActivityEnd;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8184:}
+> D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8472:    text?: string;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8473:    /** The reason the prompt was filtered. */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8474:    filteredReason?: string;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8475:}
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8476:
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8477:/** Configuration for music generation. */
+> D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8685:    text?: string;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8686:    /** Marks the start of user activity. */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8687:    activityStart?: ActivityStart;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8688:    /** Marks the end of user activity. */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8689:    activityEnd?: ActivityEnd;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8690:}
+> D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8702:export declare interface LiveServerContent {
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8703:    /** The content that the model has generated as part of the current conversation with the user. */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8704:    modelTurn?: Content;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8705:    /** If true, indicates that the model is done generating. Generation will only start in response to additional client messages. Can be set alongside `content`, indicating that the `content` is the last in the turn. */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8706:    turnComplete?: boolean;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8707:    /** If true, indicates that a client message has interrupted current model generation. If the client is playing out the content in realtime, this is a good signal to stop and empty the current queue. */
+> D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8748:export declare class LiveServerMessage {
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8749:    /** Sent in response to a `LiveClientSetup` message from the client. */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8750:    setupComplete?: LiveServerSetupComplete;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8751:    /** Content generated by the model in response to client messages. */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8752:    serverContent?: LiveServerContent;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8753:    /** Request for the client to execute the `function_calls` and return the responses with the matching `id`s. */
+> D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:10011:export declare interface Part {
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:10012:    /** Media resolution for the input media.
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:10013:     */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:10014:    mediaResolution?: PartMediaResolution;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:10015:    /** Optional. The result of executing the ExecutableCode. */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:10016:    codeExecutionResult?: CodeExecutionResult;
+> D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:10026:    inlineData?: Blob_2;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:10027:    /** Optional. The text content of the part. When sent from the VSCode Gemini Code Assist extension, references to @mentioned items will be converted to markdown boldface text. For example `@my-repo` will be converted to and sent as `**my-repo**` by the IDE agent. */
+> D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:10028:    text?: string;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:10029:    /** Optional. Indicates whether the `part` represents the model's thought process or reasoning. */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:10030:    thought?: boolean;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:10031:    /** Optional. An opaque signature for the thought so it can be reused in subsequent requests.
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:10032:     * @remarks Encoded as base64 string. */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:10033:    thoughtSignature?: string;
+> D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:10045:export declare interface PartialArg {
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:10046:    /** Optional. Represents a boolean value. */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:10047:    boolValue?: boolean;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:10048:    /** Required. A JSON Path (RFC 9535) to the argument being streamed. https://datatracker.ietf.org/doc/html/rfc9535. e.g. "$.foo.bar[0].data". */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:10049:    jsonPath?: string;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:10050:    /** Optional. Represents a null value. */
+> D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:10063:export declare interface PartMediaResolution {
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:10064:    /** The tokenization quality used for given media.
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:10065:     */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:10066:    level?: PartMediaResolutionLevel;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:10067:    /** Specifies the required sequence length for media tokenization.
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:10068:     */
+> D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:10097:export declare interface PartnerModelTuningSpec {
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:10098:    /** Hyperparameters for tuning. The accepted hyper_parameters and their valid range of values will differ depending on the base model. */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:10099:    hyperParameters?: Record<string, unknown>;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:10100:    /** Required. Cloud Storage path to file containing training dataset for tuning. The dataset must be formatted as a JSONL file. */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:10101:    trainingDatasetUri?: string;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:10102:    /** Optional. Cloud Storage path to file containing validation dataset for tuning. The dataset must be formatted as a JSONL file. */
+> D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:10323:    text?: string;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:10324:    /** The ID of the chunk. */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:10325:    chunkId?: string;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:10326:    /** The ID of the file that the chunk belongs to. */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:10327:    fileId?: string;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:10328:}
+> D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:11278:    text?: string;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:11279:}
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:11280:
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:11281:/** Configuration for segmenting an image. */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:11282:export declare interface SegmentImageConfig {
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:11283:    /** Used to override HTTP request options. */
+> D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12549:    text?: string;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12550:    /** Optional. The bool indicates the end of the transcription. */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12551:    finished?: boolean;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12552:    /** The BCP-47 language code of the transcription. */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12553:    languageCode?: string;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12554:}
+> D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:14960:    text?: string;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:14961:    /** Weight of the prompt. The weight is used to control the relative
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:14962:     importance of the prompt. Higher weights are more important than lower
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:14963:     weights.
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:14964:
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:14965:     Weight must not be 0. Weights of all weighted_prompts in this

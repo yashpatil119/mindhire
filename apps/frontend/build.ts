@@ -16,6 +16,10 @@ const result = await Bun.build({
   sourcemap: "linked",
   define: {
     "process.env.NODE_ENV": JSON.stringify("production"),
+    "__MINDHIRE_GEMINI_ENV__": JSON.stringify({
+      VITE_GEMINI_API_KEY: process.env.VITE_GEMINI_API_KEY ?? process.env.GEMINI_API_KEY ?? "",
+      VITE_GEMINI_MODEL: process.env.VITE_GEMINI_MODEL ?? "gemini-2.0-flash-live-001",
+    }),
   },
 });
 

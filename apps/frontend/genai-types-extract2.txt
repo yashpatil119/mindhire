@@ -1,0 +1,429 @@
+﻿    blockReasonMessage?: string;
+    /** Output only. A list of safety ratings for the prompt. There is one rating per category. */
+    safetyRatings?: SafetyRating[];
+}
+
+/** Usage metadata about the content generation request and response. This message provides a detailed breakdown of token usage and other relevant metrics. This data type is not supported in Gemini API. */
+export declare class GenerateContentResponseUsageMetadata {
+    /** Output only. A detailed breakdown of the token count for each modality in the cached content. */
+    cacheTokensDetails?: ModalityTokenCount[];
+    /** Output only. The number of tokens in the cached content that was used for this request. */
+    cachedContentTokenCount?: number;
+export declare class GoogleGenAI {
+    protected readonly apiClient: ApiClient;
+    private readonly apiKey?;
+    readonly vertexai: boolean;
+    private readonly apiVersion?;
+    private readonly httpOptions?;
+    readonly models: Models;
+    readonly live: Live;
+    readonly batches: Batches;
+    readonly chats: Chats;
+    readonly caches: Caches;
+    readonly live: Live;
+    readonly batches: Batches;
+    readonly chats: Chats;
+    readonly caches: Caches;
+    readonly files: Files;
+    readonly operations: Operations;
+    readonly authTokens: Tokens;
+    readonly tunings: Tunings;
+    readonly fileSearchStores: FileSearchStores;
+    private _interactions;
+    private _webhooks;
+     const session = await ai.live.connect({
+     model: model,
+     config: {
+     responseModalities: [Modality.AUDIO],
+     },
+     callbacks: {
+     onopen: () => {
+     console.log('Connected to the socket.');
+     },
+     onmessage: (e: MessageEvent) => {
+     console.log('Received message from the server: %s\n', debug(e.data));
+     onopen: () => {
+     console.log('Connected to the socket.');
+     },
+     onmessage: (e: MessageEvent) => {
+     console.log('Received message from the server: %s\n', debug(e.data));
+     },
+     onerror: (e: ErrorEvent) => {
+     console.log('Error occurred: %s\n', debug(e.error));
+     },
+     onclose: (e: CloseEvent) => {
+     console.log('Connection closed.');
+     onmessage: (e: MessageEvent) => {
+     console.log('Received message from the server: %s\n', debug(e.data));
+     },
+     onerror: (e: ErrorEvent) => {
+     console.log('Error occurred: %s\n', debug(e.error));
+     },
+     onclose: (e: CloseEvent) => {
+     console.log('Connection closed.');
+     },
+     },
+     });
+     onerror: (e: ErrorEvent) => {
+     console.log('Error occurred: %s\n', debug(e.error));
+     },
+     onclose: (e: CloseEvent) => {
+     console.log('Connection closed.');
+     },
+     },
+     });
+     ```
+     */
+    connect(params: types.LiveConnectParameters): Promise<Session>;
+     onclose: (e: CloseEvent) => {
+     console.log('Connection closed.');
+     },
+     },
+     });
+     ```
+     */
+    connect(params: types.LiveConnectParameters): Promise<Session>;
+    private isCallableTool;
+}
+
+    connect(params: types.LiveConnectParameters): Promise<Session>;
+    private isCallableTool;
+}
+
+/** Callbacks for the live API. */
+export declare interface LiveCallbacks {
+    /**
+     * Called when the websocket connection is established.
+     */
+    onopen?: (() => void) | null;
+    /**
+    onopen?: (() => void) | null;
+    /**
+     * Called when a message is received from the server.
+     */
+    onmessage: (e: LiveServerMessage) => void;
+    /**
+     * Called when an error occurs.
+     */
+    onerror?: ((e: ErrorEvent) => void) | null;
+    /**
+     * Called when the websocket connection is closed.
+    onmessage: (e: LiveServerMessage) => void;
+    /**
+     * Called when an error occurs.
+     */
+    onerror?: ((e: ErrorEvent) => void) | null;
+    /**
+     * Called when the websocket connection is closed.
+     */
+    onclose?: ((e: CloseEvent) => void) | null;
+}
+
+    onerror?: ((e: ErrorEvent) => void) | null;
+    /**
+     * Called when the websocket connection is closed.
+     */
+    onclose?: ((e: CloseEvent) => void) | null;
+}
+
+/** Incremental update of the current conversation delivered from the client.
+
+ All the content here will unconditionally be appended to the conversation
+ history and used as part of the prompt to the model to generate content.
+    onclose?: ((e: CloseEvent) => void) | null;
+}
+
+/** Incremental update of the current conversation delivered from the client.
+
+ All the content here will unconditionally be appended to the conversation
+ history and used as part of the prompt to the model to generate content.
+
+ A message here will interrupt any current model generation. */
+export declare interface LiveClientContent {
+    /** The content appended to the current conversation with the model.
+export declare interface LiveConnectConfig {
+    /** Used to override HTTP request options. */
+    httpOptions?: HttpOptions;
+    /** Abort signal which can be used to cancel the request.
+
+     NOTE: AbortSignal is a client-only operation. Using it to cancel an
+     operation will not cancel the request in the service. You will still
+     be charged usage for any applicable operations.
+     */
+    abortSignal?: AbortSignal;
+    /** The generation configuration for the session. */
+export declare interface LiveConnectConstraints {
+    /** ID of the model to configure in the ephemeral token for Live API.
+     For a list of models, see `Gemini models
+     <https://ai.google.dev/gemini-api/docs/models>`. */
+    model?: string;
+    /** Configuration specific to Live API connections created using this token. */
+    config?: LiveConnectConfig;
+}
+
+/** Parameters for connecting to the live API. */
+export declare interface LiveConnectParameters {
+export declare interface LiveConnectParameters {
+    /** ID of the model to use. For a list of models, see `Google models
+     <https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models>`_. */
+    model: string;
+    /** callbacks */
+    callbacks: LiveCallbacks;
+    /** Optional configuration parameters for the request.
+     */
+    config?: LiveConnectConfig;
+}
+
+     const session = await ai.live.music.connect({
+     model: model,
+     callbacks: {
+     onmessage: (e: MessageEvent) => {
+     console.log('Received message from the server: %s\n', debug(e.data));
+     },
+     onerror: (e: ErrorEvent) => {
+     console.log('Error occurred: %s\n', debug(e.error));
+     },
+     onclose: (e: CloseEvent) => {
+     console.log('Connection closed.');
+     onmessage: (e: MessageEvent) => {
+     console.log('Received message from the server: %s\n', debug(e.data));
+     },
+     onerror: (e: ErrorEvent) => {
+     console.log('Error occurred: %s\n', debug(e.error));
+     },
+     onclose: (e: CloseEvent) => {
+     console.log('Connection closed.');
+     },
+     },
+     });
+     onerror: (e: ErrorEvent) => {
+     console.log('Error occurred: %s\n', debug(e.error));
+     },
+     onclose: (e: CloseEvent) => {
+     console.log('Connection closed.');
+     },
+     },
+     });
+     ```
+     */
+    connect(params: types.LiveMusicConnectParameters): Promise<LiveMusicSession>;
+     onclose: (e: CloseEvent) => {
+     console.log('Connection closed.');
+     },
+     },
+     });
+     ```
+     */
+    connect(params: types.LiveMusicConnectParameters): Promise<LiveMusicSession>;
+}
+
+/** Callbacks for the realtime music API. */
+    connect(params: types.LiveMusicConnectParameters): Promise<LiveMusicSession>;
+}
+
+/** Callbacks for the realtime music API. */
+export declare interface LiveMusicCallbacks {
+    /**
+     * Called when a message is received from the server.
+     */
+    onmessage: (e: LiveMusicServerMessage) => void;
+    /**
+     * Called when an error occurs.
+    onmessage: (e: LiveMusicServerMessage) => void;
+    /**
+     * Called when an error occurs.
+     */
+    onerror?: ((e: ErrorEvent) => void) | null;
+    /**
+     * Called when the websocket connection is closed.
+     */
+    onclose?: ((e: CloseEvent) => void) | null;
+}
+
+    onerror?: ((e: ErrorEvent) => void) | null;
+    /**
+     * Called when the websocket connection is closed.
+     */
+    onclose?: ((e: CloseEvent) => void) | null;
+}
+
+/** User input to start or steer the music. */
+export declare interface LiveMusicClientContent {
+    /** Weighted prompts as the model input. */
+    weightedPrompts?: WeightedPrompt[];
+    onclose?: ((e: CloseEvent) => void) | null;
+}
+
+/** User input to start or steer the music. */
+export declare interface LiveMusicClientContent {
+    /** Weighted prompts as the model input. */
+    weightedPrompts?: WeightedPrompt[];
+}
+
+/** Messages sent by the client in the LiveMusicClientMessage call. */
+export declare interface LiveMusicClientMessage {
+    retryConnectionErrors?: boolean;
+} | {
+    strategy: "attempt-count-backoff";
+    maxRetries: number;
+    backoff?: Partial<BackoffStrategy>;
+    retryConnectionErrors?: boolean;
+};
+
+declare type ReviewSnippet$ = ReviewSnippet;
+
+declare type ReviewSnippet$2 = ReviewSnippet;
+    retryConnectionErrors?: boolean;
+};
+
+declare type ReviewSnippet$ = ReviewSnippet;
+
+declare type ReviewSnippet$2 = ReviewSnippet;
+
+declare type ReviewSnippet$3 = ReviewSnippet;
+
+/**
+ * @license
+     `sendClientContent({turns="Hello?"}`)).
+     - Managing turns when not using audio input and voice activity detection.
+     (`sendClientContent({turnComplete:true})` or the short form
+     `sendClientContent()`)
+     - Prefilling a conversation context
+     ```
+     sendClientContent({
+     turns: [
+     Content({role:user, parts:...}),
+     Content({role:user, parts:...}),
+     ...
+     (`sendClientContent({turnComplete:true})` or the short form
+     `sendClientContent()`)
+     - Prefilling a conversation context
+     ```
+     sendClientContent({
+     turns: [
+     Content({role:user, parts:...}),
+     Content({role:user, parts:...}),
+     ...
+     ]
+     })
+     `sendClientContent()`)
+     - Prefilling a conversation context
+     ```
+     sendClientContent({
+     turns: [
+     Content({role:user, parts:...}),
+     Content({role:user, parts:...}),
+     ...
+     ]
+     })
+     ```
+     sendClientContent({
+     turns: [
+     Content({role:user, parts:...}),
+     Content({role:user, parts:...}),
+     ...
+     ]
+     })
+     ```
+     @experimental
+     */
+    sendClientContent(params: types.LiveSendClientContentParameters): void;
+    sendClientContent(params: types.LiveSendClientContentParameters): void;
+    /**
+     Send a realtime message over the established connection.
+
+     @param params - Contains one property, `media`.
+
+     - `media` will be converted to a `Blob`
+
+     @experimental
+
+     @remarks
+    sendRealtimeInput(params: types.LiveSendRealtimeInputParameters): void;
+    /**
+     Send a function response message over the established connection.
+
+     @param params - Contains property `functionResponses`.
+
+     - `functionResponses` will be converted to a `functionResponses[]`
+
+     @remarks
+     Use `sendFunctionResponse` to reply to `LiveServerToolCall` from the server.
+
+     const session = await ai.live.connect({
+     model: model,
+     config: {
+     responseModalities: [Modality.AUDIO],
+     }
+     });
+
+     session.close();
+     ```
+     */
+    close(): void;
+    terminateOnClose?: boolean;
+    /** HTTP timeout for regular operations. */
+    timeout?: string;
+    /** The full URL for the MCPServer endpoint. Example: "https://api.example.com/mcp". */
+    url?: string;
+}
+
+/**
+ * @license
+ * Copyright 2026 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+    connect(): void;
+    /**
+     * Sends a message to the server.
+     */
+    send(message: string): void;
+    /**
+     * Closes the socket connection.
+     */
+    close(): void;
+}
+
+    onopen: () => void;
+    onerror: (e: any) => void;
+    onmessage: (e: any) => void;
+    onclose: (e: any) => void;
+}
+
+declare interface WebSocketFactory {
+    /**
+     * Returns a new WebSocket instance.
+     */
+    create(url: string, headers: Record<string, string>, callbacks: WebSocketCallbacks): WebSocket_2;
+    onerror: (e: any) => void;
+    onmessage: (e: any) => void;
+    onclose: (e: any) => void;
+}
+
+declare interface WebSocketFactory {
+    /**
+     * Returns a new WebSocket instance.
+     */
+    create(url: string, headers: Record<string, string>, callbacks: WebSocketCallbacks): WebSocket_2;
+}
+    onmessage: (e: any) => void;
+    onclose: (e: any) => void;
+}
+
+declare interface WebSocketFactory {
+    /**
+     * Returns a new WebSocket instance.
+     */
+    create(url: string, headers: Record<string, string>, callbacks: WebSocketCallbacks): WebSocket_2;
+}
+
+    onclose: (e: any) => void;
+}
+
+declare interface WebSocketFactory {
+    /**
+     * Returns a new WebSocket instance.
+     */
+    create(url: string, headers: Record<string, string>, callbacks: WebSocketCallbacks): WebSocket_2;
+}
+
+/** Maps a prompt to a relative weight to steer music generation. */

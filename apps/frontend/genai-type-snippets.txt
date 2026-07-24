@@ -1,0 +1,165 @@
+> D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:1135:declare interface Blob_2 {
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:1136:    /** Required. The raw bytes of the data.
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:1137:     * @remarks Encoded as base64 string. */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:1138:    data?: string;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:1139:    /** Optional. The display name of the blob. Used to provide a label or filename to distinguish blobs. This field is only returned in `PromptMessage` for prompt management. It is used in the Gemini calls only when server-side tools (`code_execution`, `google_search`, and `url_context`) are enabled. This field is not supported in Gemini API. */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:1140:    displayName?: string;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:1141:    /** Required. The IANA standard MIME type of the source data. */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:1142:    mimeType?: string;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:1143:}
+> D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:1144:export { Blob_2 as Blob }
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:1145:
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:1146:export declare type BlobImageUnion = Blob_2;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:1147:
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:1148:/** Output only. The reason why the prompt was blocked. */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:1149:export declare enum BlockedReason {
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:1150:    /**
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:1151:     * The blocked reason is unspecified.
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:1152:     */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:1153:    BLOCKED_REASON_UNSPECIFIED = "BLOCKED_REASON_UNSPECIFIED",
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:1154:    /**
+> D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:4793:    responseModalities?: string[];
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:4794:    /** If specified, the media resolution specified will be used.
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:4795:     */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:4796:    mediaResolution?: MediaResolution;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:4797:    /** The speech generation configuration.
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:4798:     */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:4799:    speechConfig?: SpeechConfigUnion;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:4800:    /** If enabled, audio timestamp will be included in the request to the
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:4801:     model.
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:4802:     */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:4803:    audioTimestamp?: boolean;
+> D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:5293:    responseModalities?: Modality[];
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:5294:    /** Optional. Lets you to specify a schema for the model's response, ensuring that the output conforms to a particular structure. This is useful for generating structured data such as JSON. The schema is a subset of the [OpenAPI 3.0 schema object](https://spec.openapis.org/oas/v3.0.3#schema) object. When this field is set, you must also set the `response_mime_type` to `application/json`. */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:5295:    responseSchema?: Schema;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:5296:    /** Optional. Routing configuration. This field is not supported in Gemini API. */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:5297:    routingConfig?: GenerationConfigRoutingConfig;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:5298:    /** Optional. A seed for the random number generator. By setting a seed, you can make the model's output mostly deterministic. For a given prompt and parameters (like temperature, top_p, etc.), the model will produce the same response every time. However, it's not a guaranteed absolute deterministic behavior. This is different from parameters like `temperature`, which control the *level* of randomness. `seed` ensures that the "random" choices the model makes are the same on every run, making it essential for testing and ensuring reproducible results. */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:5299:    seed?: number;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:5300:    /** Optional. The speech generation config. */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:5301:    speechConfig?: SpeechConfig;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:5302:    /** Optional. A list of character sequences that will stop the model from generating further tokens. If a stop sequence is generated, the output will end at that point. This is useful for controlling the length and structure of the output. For example, you can use ["\n", "###"] to stop generation at a new line or a specific marker. */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:5303:    stopSequences?: string[];
+> D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8072:     responseModalities: [Modality.AUDIO],
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8073:     },
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8074:     callbacks: {
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8075:     onopen: () => {
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8076:     console.log('Connected to the socket.');
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8077:     },
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8078:     onmessage: (e: MessageEvent) => {
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8079:     console.log('Received message from the server: %s\n', debug(e.data));
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8080:     },
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8081:     onerror: (e: ErrorEvent) => {
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8082:     console.log('Error occurred: %s\n', debug(e.error));
+> D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8254:export declare interface LiveConnectConfig {
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8255:    /** Used to override HTTP request options. */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8256:    httpOptions?: HttpOptions;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8257:    /** Abort signal which can be used to cancel the request.
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8258:
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8259:     NOTE: AbortSignal is a client-only operation. Using it to cancel an
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8260:     operation will not cancel the request in the service. You will still
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8261:     be charged usage for any applicable operations.
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8262:     */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8263:    abortSignal?: AbortSignal;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8264:    /** The generation configuration for the session. */
+> D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8269:    responseModalities?: Modality[];
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8270:    /** Value that controls the degree of randomness in token selection.
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8271:     Lower temperatures are good for prompts that require a less open-ended or
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8272:     creative response, while higher temperatures can lead to more diverse or
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8273:     creative results.
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8274:     */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8275:    temperature?: number;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8276:    /** Tokens are selected from the most to least probable until the sum
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8277:     of their probabilities equals this value. Use a lower value for less
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8278:     random responses and a higher value for more random responses.
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8279:     */
+> D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8667:export declare interface LiveSendRealtimeInputParameters {
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8668:    /** Realtime input to send to the session. */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8669:    media?: BlobImageUnion;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8670:    /** The realtime audio input stream. */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8671:    audio?: Blob_2;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8672:    /**
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8673:     Indicates that the audio stream has ended, e.g. because the microphone was
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8674:     turned off.
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8675:
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8676:     This should only be sent when automatic activity detection is enabled
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8677:     (which is the default).
+> D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8748:export declare class LiveServerMessage {
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8749:    /** Sent in response to a `LiveClientSetup` message from the client. */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8750:    setupComplete?: LiveServerSetupComplete;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8751:    /** Content generated by the model in response to client messages. */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8752:    serverContent?: LiveServerContent;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8753:    /** Request for the client to execute the `function_calls` and return the responses with the matching `id`s. */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8754:    toolCall?: LiveServerToolCall;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8755:    /** Notification for the client that a previously issued `ToolCallMessage` with the specified `id`s should have been not executed and should be cancelled. */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8756:    toolCallCancellation?: LiveServerToolCallCancellation;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8757:    /** Usage metadata about model response(s). */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:8758:    usageMetadata?: UsageMetadata;
+> D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:9133:export declare enum Modality {
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:9134:    /**
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:9135:     * The modality is unspecified.
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:9136:     */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:9137:    MODALITY_UNSPECIFIED = "MODALITY_UNSPECIFIED",
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:9138:    /**
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:9139:     * Indicates the model should return text
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:9140:     */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:9141:    TEXT = "TEXT",
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:9142:    /**
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:9143:     * Indicates the model should return images.
+> D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:11516:     responseModalities: [Modality.AUDIO],
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:11517:     }
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:11518:     });
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:11519:
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:11520:     session.close();
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:11521:     ```
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:11522:     */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:11523:    close(): void;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:11524:}
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:11525:
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:11526:/** Configuration of session resumption mechanism.
+> D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12314:     *           'responseModalities': ['AUDIO'],
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12315:     *           'systemInstruction': 'Always answer in English.',
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12316:     *        }
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12317:     *     }
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12318:     * }
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12319:     * const token = await ai.tokens.create(config);
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12320:     *
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12321:     * // Case 3: If LiveEphemeralParameters is set and lockAdditionalFields is
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12322:     * // set, lock LiveConnectConfig with set and additional fields (e.g.
+> D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12323:     * // responseModalities, systemInstruction, temperature in this example) when
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12324:     * // using the token in Live API sessions.
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12325:     * const config: CreateAuthTokenConfig =
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12326:     *     uses: 3,
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12327:     *     expireTime: '2025-05-01T00:00:00Z',
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12328:     *     LiveEphemeralParameters: {
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12329:     *        model: 'gemini-2.0-flash-001',
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12330:     *        config: {
+> D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12331:     *           'responseModalities': ['AUDIO'],
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12332:     *           'systemInstruction': 'Always answer in English.',
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12333:     *        }
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12334:     *     },
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12335:     *     lockAdditionalFields: ['temperature'],
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12336:     * }
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12337:     * const token = await ai.tokens.create(config);
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12338:     *
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12339:     * // Case 4: If LiveEphemeralParameters is set and lockAdditionalFields is
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12340:     * // empty array, lock LiveConnectConfig with set fields (e.g.
+> D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12341:     * // responseModalities, systemInstruction in this example) when using the
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12342:     * // token in Live API sessions.
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12343:     * const config: CreateAuthTokenConfig =
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12344:     *     uses: 3,
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12345:     *     expireTime: '2025-05-01T00:00:00Z',
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12346:     *     LiveEphemeralParameters: {
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12347:     *        model: 'gemini-2.0-flash-001',
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12348:     *        config: {
+> D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12349:     *           'responseModalities': ['AUDIO'],
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12350:     *           'systemInstruction': 'Always answer in English.',
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12351:     *        }
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12352:     *     },
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12353:     *     lockAdditionalFields: [],
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12354:     * }
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12355:     * const token = await ai.tokens.create(config);
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12356:     * ```
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12357:     */
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12358:    create(params: types.CreateAuthTokenParameters): Promise<types.AuthToken>;
+  D:\mindhire\apps\frontend\node_modules\@google\genai\dist\genai.d.ts:12359:}
